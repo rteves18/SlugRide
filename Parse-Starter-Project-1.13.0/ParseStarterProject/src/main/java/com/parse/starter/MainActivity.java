@@ -16,7 +16,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Switch;
 
+import com.parse.LogInCallback;
 import com.parse.ParseAnalytics;
+import com.parse.ParseAnonymousUtils;
+import com.parse.ParseException;
+import com.parse.ParseUser;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -26,6 +30,19 @@ public class MainActivity extends ActionBarActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
       getSupportActionBar().hide();
+
+    if(ParseUser.getCurrentUser() == null){
+      ParseAnonymousUtils.logIn(new LogInCallback() {
+        @Override
+        public void done(ParseUser user, ParseException e) {
+          if ( e == null) {
+            Log.i("Info", "Anonymous login successful");
+          } else {
+            Log.i("Info", "Anonymous login failed");
+          }
+        }
+      });
+    }
 
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
   }
