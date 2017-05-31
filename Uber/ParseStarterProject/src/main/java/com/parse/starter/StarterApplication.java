@@ -30,33 +30,31 @@ public class StarterApplication extends Application {
 
     // Add your initialization code here
     Parse.initialize(new Parse.Configuration.Builder(getApplicationContext())
-            .applicationId("66bc4c2de8e329ced337e0e4b2583ddf7ab7e4dc")
-            .clientKey("0c1e2e2defd0934660baf4f5beea363cc9c53c72")
-            .server("http://ec2-52-14-6-149.us-east-2.compute.amazonaws.com:80/parse/")
+            .applicationId("slugrideioucsccmps1212017")
+            .clientKey("121&sprg17%luca$ride")
+            .server("https://slugride.herokuapp.com/parse")
             .build()
     );
 
-    ParseObject object = new ParseObject("ExampleObject");
-    object.put("myNumber", "123");
-    object.put("myString", "rob");
-
-    object.saveInBackground(new SaveCallback () {
-      @Override
-      public void done(ParseException ex) {
-        if (ex == null) {
-          Log.i("Parse Result", "Successful!");
+    ParseObject gameScore = new ParseObject("GameScore");
+    gameScore.put("score", 1337);
+    gameScore.put("playerName", "Sean Plott");
+    gameScore.put("cheatMode", false);
+    gameScore.saveInBackground(new SaveCallback() {
+      public void done(ParseException e) {
+        if (e == null) {
+          Log.i("Parse", "Save Succeeded");
         } else {
-          Log.i("Parse Result", "Failed" + ex.toString());
+          Log.i("Parse", "Save Failed");
         }
       }
     });
 
+
     ParseUser.enableAutomaticUser();
-
     ParseACL defaultACL = new ParseACL();
-    defaultACL.setPublicReadAccess(true);
-    defaultACL.setPublicWriteAccess(true);
+    // Optionally enable public read access.
+    // defaultACL.setPublicReadAccess(true);
     ParseACL.setDefaultACL(defaultACL, true);
-
   }
 }

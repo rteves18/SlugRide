@@ -48,6 +48,10 @@
         "source": "/Users/rteves/.android/build-cache/f091b82f4c848d0c3c111a9e39c308781a11272c/output/res/drawable/abc_item_background_holo_light.xml"
     },
     {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/res/merged/debug/drawable/slug.jpg",
+        "source": "/Users/rteves/Documents/college/cmps/cmps121/final_project/Parse-Starter-Project-1.13.0/ParseStarterProject/src/main/res/drawable/slug.jpg"
+    },
+    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
         "source": "/Users/rteves/.android/build-cache/f091b82f4c848d0c3c111a9e39c308781a11272c/output/res/drawable/abc_item_background_holo_dark.xml"
     },

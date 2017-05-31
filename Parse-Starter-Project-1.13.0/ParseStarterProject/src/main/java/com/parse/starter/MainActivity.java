@@ -10,8 +10,11 @@ package com.parse.starter;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Switch;
 
 import com.parse.ParseAnalytics;
 
@@ -22,6 +25,7 @@ public class MainActivity extends ActionBarActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+      getSupportActionBar().hide();
 
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
   }
@@ -46,5 +50,10 @@ public class MainActivity extends ActionBarActivity {
     }
 
     return super.onOptionsItemSelected(item);
+  }
+
+  public void getStarted(View view) {
+    Switch userTypeSwitch = (Switch) findViewById(R.id.usertypeSwitch);
+    Log.v("Switch value", String.valueOf(userTypeSwitch.isChecked()));
   }
 }
