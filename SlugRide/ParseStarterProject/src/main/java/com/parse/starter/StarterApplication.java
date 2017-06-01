@@ -29,12 +29,12 @@ public class StarterApplication extends Application {
     Parse.enableLocalDatastore(this);
 
     // Add your initialization code here
-    Parse.initialize(new Parse.Configuration.Builder(getApplicationContext())
-            .applicationId("instagram63537UJDFHEYhdfkefh")
-            .clientKey(null)
-            .server("http://instagram319.herokuapp.com/parse/")
-    .build()
-    );
+      Parse.initialize(new Parse.Configuration.Builder(getApplicationContext())
+              .applicationId("cmps121ucscslugrider318")
+              .clientKey("TheMasterofAllKeys333")
+              .server("https://slugridin.herokuapp.com/parse/")
+              .build()
+      );
 
       ParseObject gameScore = new ParseObject("GameScore");
       gameScore.put("score", 1337);
