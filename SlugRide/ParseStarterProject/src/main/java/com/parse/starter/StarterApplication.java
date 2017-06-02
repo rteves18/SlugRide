@@ -36,22 +36,22 @@ public class StarterApplication extends Application {
               .build()
       );
 
-      ParseObject gameScore = new ParseObject("GameScore");
-      gameScore.put("score", 1337);
-      gameScore.put("playerName", "Sean Plott");
-      gameScore.put("cheatMode", false);
-      gameScore.saveInBackground(new SaveCallback() {
-          public void done(ParseException e) {
-              if (e == null) {
-                  Log.i("Parse", "Save Succeeded");
-              } else {
-                  Log.i("Parse", "Save Failed");
-              }
-          }
-      });
+//      ParseObject gameScore = new ParseObject("GameScore");
+//      gameScore.put("score", 1388);
+//      gameScore.put("playerName", "Sean Plott");
+//      gameScore.put("cheatMode", false);
+//      gameScore.saveInBackground(new SaveCallback() {
+//          public void done(ParseException e) {
+//              if (e == null) {
+//                  Log.i("Parse", "Save Succeeded");
+//              } else {
+//                  Log.i("Parse", "Save Failed");
+//              }
+//          }
+//      });
 
 
-      ParseUser.enableAutomaticUser();
+      //ParseUser.enableAutomaticUser();
     ParseACL defaultACL = new ParseACL();
     // Optionally enable public read access.
     // defaultACL.setPublicReadAccess(true);

@@ -11,13 +11,13 @@
                     "endOffset": 127
                 },
                 "from": {
-                    "file": "/Users/rteves/.android/build-cache/f091b82f4c848d0c3c111a9e39c308781a11272c/output/res/values-w720dp/values-w720dp.xml",
+                    "file": "/Users/rteves/.android/build-cache/08a322621f9501df01bf75d2fe6467266596c6fb/output/res/values-w720dp-v13/values-w720dp-v13.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 293,
+                        "startOffset": 55,
                         "endColumn": 76,
-                        "endOffset": 365
+                        "endOffset": 127
                     }
                 }
             }

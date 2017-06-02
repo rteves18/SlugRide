@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/rteves/.android/build-cache/08a322621f9501df01bf75d2fe6467266596c6fb/output/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/Users/rteves/.android/build-cache/0227d3022eeab0645e49b62776c45336196afb6b/output/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/Users/rteves/.android/build-cache/0227d3022eeab0645e49b62776c45336196afb6b/output/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/Users/rteves/.android/build-cache/0227d3022eeab0645e49b62776c45336196afb6b/output/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/rteves/.android/build-cache/0227d3022eeab0645e49b62776c45336196afb6b/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/Users/rteves/.android/build-cache/0227d3022eeab0645e49b62776c45336196afb6b/output/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/Users/rteves/.android/build-cache/0227d3022eeab0645e49b62776c45336196afb6b/output/res/color-v23/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/Users/rteves/.android/build-cache/0227d3022eeab0645e49b62776c45336196afb6b/output/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/Users/rteves/.android/build-cache/0227d3022eeab0645e49b62776c45336196afb6b/output/res/color-v23/abc_tint_seek_thumb.xml"
+    }
+]

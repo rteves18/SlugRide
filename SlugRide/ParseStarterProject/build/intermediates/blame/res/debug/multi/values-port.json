@@ -11,13 +11,13 @@
                     "endOffset": 106
                 },
                 "from": {
-                    "file": "/Users/rteves/.android/build-cache/f091b82f4c848d0c3c111a9e39c308781a11272c/output/res/values-port/values-port.xml",
+                    "file": "/Users/rteves/.android/build-cache/08a322621f9501df01bf75d2fe6467266596c6fb/output/res/values-port/values-port.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 291,
+                        "startOffset": 55,
                         "endColumn": 55,
-                        "endOffset": 342
+                        "endOffset": 106
                     }
                 }
             }

@@ -2,46 +2,103 @@
 <items version="2" >
 
     <item
-        jar="/Users/robpercival/.gradle/caches/modules-2/files-2.1/com.parse/parse-android/1.13.0/58a7d54b6a4f28be11f0cecec93097eddf473e6f/parse-android-1.13.0.jar"
+        is-multidex="false"
+        jar="/Users/rteves/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.2.0/support-annotations-25.2.0.jar"
         jumboMode="false"
-        revision="23.0.1"
-        sha1="58a7d54b6a4f28be11f0cecec93097eddf473e6f">
-        <dex dex="/Users/robpercival/Desktop/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/parse-android-1.13.0-dad18202da1f77a2b2d4626b645dd15f9fac1a68.jar" />
+        optimize="true"
+        revision="25.0.0"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/pre-dexed/debug/support-annotations-25.2.0_d4eff0c9848d505eb97f4e92337f320a9713bdbd.jar" />
     </item>
     <item
-        jar="/Users/robpercival/Desktop/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        is-multidex="false"
+        jar="/Users/rteves/.android/build-cache/573d2a12548cd5c521fa9a88090bf99a0018f856/output/jars/classes.jar"
         jumboMode="false"
-        revision="23.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="/Users/robpercival/Desktop/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-b99c9021cb4e7cff914c6c5cacdda7cd489c4afd.jar" />
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_3bae773a56ebf7b8a3c7921ebef8d35f977dd5a4.jar" />
     </item>
     <item
-        jar="/Users/robpercival/Desktop/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        is-multidex="false"
+        jar="/Users/rteves/.android/build-cache/0e6574084c09c1a1bc597f8118085945df1ee23b/output/jars/classes.jar"
         jumboMode="false"
-        revision="23.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="/Users/robpercival/Desktop/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-2b30b28a2f308286d9dc734cbe3874d1f2691021.jar" />
+        optimize="true"
+        revision="25.0.0"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_01dc37e84257e96e5b4e54bf2e8d3ced3cc2614f.jar" />
     </item>
     <item
-        jar="/Users/robpercival/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        is-multidex="false"
+        jar="/Users/rteves/.android/build-cache/d5decc9efd02ce05ab591362973533cb1ccd9e09/output/jars/classes.jar"
         jumboMode="false"
-        revision="23.0.1"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="/Users/robpercival/Desktop/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-d4370917688e98d570f9c4e6647cdc2b49c9e78b.jar" />
+        optimize="true"
+        revision="25.0.0"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_d7fa8de41aca9c964ce5481ff855f56588eb5916.jar" />
     </item>
     <item
-        jar="/Users/robpercival/Desktop/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        is-multidex="false"
+        jar="/Users/rteves/.android/build-cache/876428a8f865d6d6ac6a0d94d140ad09179e44ce/output/jars/classes.jar"
         jumboMode="false"
-        revision="23.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="/Users/robpercival/Desktop/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-25f2a0cdc3342422f6aba13b8393932001c8416f.jar" />
+        optimize="true"
+        revision="25.0.0"
+        sha1="0c6924cbba8248329a8c58ead6a380efe7eee76e">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_96bc78f9c7cecc87fae2bcfed3e43b868011efdc.jar" />
     </item>
     <item
-        jar="/Users/robpercival/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        is-multidex="false"
+        jar="/Users/rteves/.android/build-cache/99f04d8f8014cd9e7b6afc860bf8792799d04524/output/jars/classes.jar"
         jumboMode="false"
-        revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/Users/robpercival/Desktop/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0-6454d756a1331c0dc72a1a0a08357e1a310c2df6.jar" />
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_7018189f1d148694d01af8169fe1a7aaca073a48.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rteves/.android/build-cache/564c5adfb32169307d57b862c5b5838128a8fe7d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="69e74a8b1cbf5b8ee0fc0cca6bab1ac6c45efef8">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_ec69ab8139de66a66be12e85f81c4c971701174c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rteves/.android/build-cache/c288afcdc7a2fd4c3d08cbf74d7fa204df17c6df/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_e041779c3fa0d5a49db9ad4a025a4dca070b7f11.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rteves/.android/build-cache/0d5e6d3b5d66498fb9825caefe3384814c0198a7/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="900a290779cdb4eb2e63b6f7806fd9f30ce4f60d">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_fcd19be9341e0caaaf1e41e578c70f5139c77c58.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rteves/.android/build-cache/ee727de83b54653999efc0e45f528f910da380d3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_aa5e0ff1161d661d58cea168b7620f41bbc617cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rteves/.android/build-cache/7592c49d5d58b0483f7a19ad8427c2617a73e38c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3f0a85e6000998ac322ddd50750e8cf91601a84b">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_0f2da12756b1b7b07a9fac59b4c83067f5bb2398.jar" />
     </item>
 
 </items>
