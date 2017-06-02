@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
-        "source": "/Users/rteves/.android/build-cache/0227d3022eeab0645e49b62776c45336196afb6b/output/res/drawable-v21/notification_action_background.xml"
-    },
-    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
         "source": "/Users/rteves/.android/build-cache/08a322621f9501df01bf75d2fe6467266596c6fb/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
     },
