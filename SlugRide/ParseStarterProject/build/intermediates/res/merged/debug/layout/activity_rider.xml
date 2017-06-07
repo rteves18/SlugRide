@@ -15,14 +15,26 @@
     tools:context="com.parse.starter.RiderActivity" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/callUberButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginBottom="33dp"
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
-        android:text="Button"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:onClick="callUber"
+        android:text="Call An Uber" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/callUberButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/callUberButton"
+        android:layout_marginTop="16dp"
+        android:onClick="logout"
+        android:text="Logout" />
 </RelativeLayout>
