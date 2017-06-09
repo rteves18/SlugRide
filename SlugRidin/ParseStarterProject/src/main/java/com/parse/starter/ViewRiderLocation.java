@@ -3,9 +3,11 @@ package com.parse.starter;
 //Activity Manages the views of both rider and driver and is the last step before a ride is accepted
 
 import android.content.Intent;
+import android.graphics.Point;
 import android.net.Uri;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 
@@ -116,8 +118,8 @@ public class ViewRiderLocation extends FragmentActivity implements OnMapReadyCal
         LatLng DriverLatLng = new LatLng(i.getDoubleExtra("userLatitude", 0), i.getDoubleExtra("userLongitude", 0));
         markers.add(mMap.addMarker(new MarkerOptions()
                         .position(DriverLatLng)
-                        .title("Rider Location")
-                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))));
+                        .title("Your Location")
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))));
 
         //Looping through Markers and adding to builder.
         LatLngBounds.Builder builder = new LatLngBounds.Builder();
@@ -131,7 +133,10 @@ public class ViewRiderLocation extends FragmentActivity implements OnMapReadyCal
         int padding = 150;
 
         //putting it together now
-        CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
+        Point displaySizePx = new Point();
+        Display display = getWindowManager().getDefaultDisplay();
+        display.getSize(displaySizePx);
+        CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, displaySizePx.x, displaySizePx.y, padding);
 
         //animate and show!
         mMap.animateCamera(cu);

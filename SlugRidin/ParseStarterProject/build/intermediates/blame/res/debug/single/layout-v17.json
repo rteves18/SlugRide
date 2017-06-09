@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/Simple-Android-Uber-Clone/ParseStarterProject/build/intermediates/res/merged/debug/layout-v17/mr_media_route_list_item.xml",
-        "source": "/Users/rteves/.android/build-cache/d582baf554809e065e1a466168c9e568db469d2e/output/res/layout-v17/mr_media_route_list_item.xml"
-    },
-    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout-v17/mr_media_route_list_item.xml",
         "source": "/Users/rteves/.android/build-cache/d582baf554809e065e1a466168c9e568db469d2e/output/res/layout-v17/mr_media_route_list_item.xml"
     }

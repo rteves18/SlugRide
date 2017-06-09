@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/Simple-Android-Uber-Clone/ParseStarterProject/build/intermediates/res/merged/debug/menu/menu_main.xml",
-        "source": "/Users/rteves/Documents/college/cmps/cmps121/Simple-Android-Uber-Clone/ParseStarterProject/src/main/res/menu/menu_main.xml"
-    },
-    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/menu/menu_main.xml",
         "source": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/src/main/res/menu/menu_main.xml"
     }

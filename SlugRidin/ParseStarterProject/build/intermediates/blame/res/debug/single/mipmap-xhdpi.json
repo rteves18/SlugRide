@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/Simple-Android-Uber-Clone/ParseStarterProject/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
-        "source": "/Users/rteves/Documents/college/cmps/cmps121/Simple-Android-Uber-Clone/ParseStarterProject/src/main/res/mipmap-xhdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
         "source": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/src/main/res/mipmap-xhdpi/ic_launcher.png"
     }

@@ -74,6 +74,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
 
         //Allows the user to cancel an already submitted request
         } else {
+            Log.i("blah", "1");
 
             //search Parse for all objects with our username. Then deletes them from the database
             ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Requests");
@@ -209,6 +210,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
     //This will allow us to later compare the rider geopoint with the driver geopoint.
     public void updateLocation(Location location){
         if (requestActive) {
+            Log.i("blah", "2");
             final ParseGeoPoint userLocation = new ParseGeoPoint(location.getLatitude(), location.getLongitude());
             ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Requests");
             query.whereEqualTo("requesterUsername", "1");//ParseUser.getCurrentUser().getUsername());
