@@ -13,6 +13,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -57,10 +58,27 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
                 if (e == null && objects.size() > 0){
-                    if(requestActive) {
-                        infoTextView.setText("Your driver is on the way!");
-//                    requestUberButton.setVisibility(View.INVISIBLE);
-                    }
+                    ParseQuery<ParseUser> query = ParseUser.getQuery();
+                    query.whereEqualTo("username", objects.get(0).getString("driverUsername"));
+                    query.findInBackground(new FindCallback<ParseUser>() {
+                        @Override
+                        public void done(List<ParseUser> objects, ParseException e) {
+                            if (e == null && objects.size() > 0) {
+                                ParseGeoPoint driverLocation = objects.get(0).getParseGeoPoint("location");
+                                Location location = locationManager.getLastKnownLocation(provider);
+                                if (location != null){
+                                    ParseGeoPoint userLocation = new ParseGeoPoint(location.getLatitude(), location.getLongitude());
+                                    Double distanceInMiles = userLocation.distanceInMilesTo(userLocation);
+                                    Double distaneOneDP = (double) Math.round(distanceInMiles * 10) / 10;
+                                    infoTextView.setText("Your driver is " +  distaneOneDP.toString() + " miles away!");
+                                }
+                            }
+                        }
+                    });
+//                    if(requestActive) {
+//                        infoTextView.setText("Your driver is on the way!");
+////                    requestUberButton.setVisibility(View.INVISIBLE);
+//                    }
                 }
                 handler.postDelayed(new Runnable() {
                     @Override
