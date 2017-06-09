@@ -58,7 +58,7 @@ public class ViewRiderLocation extends FragmentActivity implements OnMapReadyCal
                 if ( e == null){
                     if(objects.size() > 0){
                         for (ParseObject object : objects){
-                            object.put("driverUsername", "dname"); //ParseUser.getCurrentUser().getUsername());
+                            object.put("driverUsername", ParseUser.getCurrentUser().getUsername());
                             object.saveInBackground(new SaveCallback() {
                                 @Override
                                 public void done(ParseException e) {

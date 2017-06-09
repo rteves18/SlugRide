@@ -25,10 +25,12 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.parse.FindCallback;
+import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -163,6 +165,8 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
     @Override
     public void onLocationChanged(Location location) {
         updateLocation();
+        ParseUser.getCurrentUser().put("location", new ParseGeoPoint(location.getLatitude(), location.getLongitude()));
+        ParseUser.getCurrentUser().saveInBackground();
     }
 
     @Override

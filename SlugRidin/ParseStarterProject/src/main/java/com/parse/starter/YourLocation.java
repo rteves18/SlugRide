@@ -34,6 +34,8 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import java.util.List;
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
 
 public class YourLocation extends FragmentActivity implements OnMapReadyCallback, LocationListener {
 
@@ -43,10 +45,32 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
     TextView infoTextView;
     Button requestUberButton;
     boolean buttonMyLocationClicked = false;
-    Button callUberButton;
     Boolean requestActive = false;
+    android.os.Handler handler = new android.os.Handler();
 
 
+    public void checkForUpdates(){
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Requests");
+        query.whereEqualTo("requesterUsername", ParseUser.getCurrentUser().getUsername());
+        query.whereExists("driverUsername");
+        query.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, ParseException e) {
+                if (e == null && objects.size() > 0){
+                    if(requestActive) {
+                        infoTextView.setText("Your driver is on the way!");
+//                    requestUberButton.setVisibility(View.INVISIBLE);
+                    }
+                }
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        checkForUpdates();
+                    }
+                }, 2000);
+            }
+        });
+    }
     //Runs when a user clicks "REQUEST UBER"
     public void requestUber(View view){
         //Allows the user to create a request
@@ -54,7 +78,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
 
             //create a new parse object with public read/write access that passes along our request to the database
             ParseObject request = new ParseObject("Requests");
-            request.put("requesterUsername", "1");//ParseUser.getCurrentUser().getUsername());
+            request.put("requesterUsername", ParseUser.getCurrentUser().getUsername());//ParseUser.getCurrentUser().getUsername());
             ParseACL parseACL = new ParseACL();
             parseACL.setPublicWriteAccess(true);
             parseACL.setPublicReadAccess(true);
@@ -66,6 +90,10 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                         infoTextView.setText("Finding Uber driver...");
                         requestUberButton.setText("Cancel Uber");
                         requestActive = true;
+                        Location location = locationManager.getLastKnownLocation(provider);
+                        updateLocation(location);
+                        checkForUpdates();
+
                     }
                 }
             });
@@ -74,11 +102,11 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
 
         //Allows the user to cancel an already submitted request
         } else {
-            Log.i("blah", "1");
+            Log.i("blah", "deleting request");
 
             //search Parse for all objects with our username. Then deletes them from the database
             ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Requests");
-            query.whereEqualTo("requesterUsername", "1");//ParseUser.getCurrentUser().getUsername());
+            query.whereEqualTo("requesterUsername", ParseUser.getCurrentUser().getUsername());
             query.findInBackground(new FindCallback<ParseObject>() {
                 @Override
                 public void done(List<ParseObject> objects, ParseException e) {
@@ -117,6 +145,22 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
 
         infoTextView = (TextView) findViewById(R.id.infoTextView);
         requestUberButton = (Button) findViewById(R.id.requestUber);
+
+        ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Requests");
+        query.whereEqualTo("requesterUsername", ParseUser.getCurrentUser().getUsername());
+        query.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, ParseException e) {
+                if( e == null){
+                    if (objects.size() > 0){
+
+                        requestActive = true;
+                        requestUberButton.setText("Cancel Uber");
+                        checkForUpdates();
+                    }
+                }
+            }
+        });
 
         //Use the location manager and provider to determine the users location accurate to 1 meter, updated 400 miliseconds
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -210,10 +254,10 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
     //This will allow us to later compare the rider geopoint with the driver geopoint.
     public void updateLocation(Location location){
         if (requestActive) {
-            Log.i("blah", "2");
+            Log.i("blah", "putting location to request");
             final ParseGeoPoint userLocation = new ParseGeoPoint(location.getLatitude(), location.getLongitude());
             ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Requests");
-            query.whereEqualTo("requesterUsername", "1");//ParseUser.getCurrentUser().getUsername());
+            query.whereEqualTo("requesterUsername", ParseUser.getCurrentUser().getUsername());
             query.findInBackground(new FindCallback<ParseObject>() {
                 @Override
                 public void done(List<ParseObject> objects, ParseException e) {

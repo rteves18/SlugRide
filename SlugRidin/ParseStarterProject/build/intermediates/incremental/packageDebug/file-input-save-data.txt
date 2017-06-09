@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Jun 09 12:44:06 PDT 2017
+#Fri Jun 09 16:13:10 PDT 2017
 210.set=ANDROID_RESOURCE
 14.set=ANDROID_RESOURCE
 180.file=/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/resources-debug.ap_/res/layout/activity_main.xml
