@@ -32,6 +32,9 @@ public class MainActivity extends ActionBarActivity {
         if(ParseUser.getCurrentUser().get("riderOrDriver").equals("rider")){
             Intent intent = new Intent(getApplicationContext(), RiderActivity.class);
             startActivity(intent);
+        } else {
+            Intent intent = new Intent(getApplicationContext(), ViewRequestActivity.class);
+            startActivity(intent);
         }
     }
 
@@ -40,7 +43,7 @@ public class MainActivity extends ActionBarActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    getSupportActionBar().hide();
+//    getSupportActionBar().hide();
 
     if (ParseUser.getCurrentUser() == null) {
       ParseAnonymousUtils.logIn(new LogInCallback() {

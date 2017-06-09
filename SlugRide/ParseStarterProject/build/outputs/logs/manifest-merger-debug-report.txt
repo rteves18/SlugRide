@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:9:1-61:12
+ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:9:1-63:12
 	package
 		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:10:5-32
 		INJECTED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml
@@ -28,7 +28,7 @@ ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/P
 	android:name
 		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:20:22-76
 application
-ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:22:5-59:19
+ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:22:5-61:19
 MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/rteves/.android/build-cache/08a322621f9501df01bf75d2fe6467266596c6fb/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/rteves/.android/build-cache/e90bb9f0f71bf60c6e21521ddb6b8ef02b9b8386/output/AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/rteves/.android/build-cache/dabaa32d667b4876cd434965350a67669e0ede33/output/AndroidManifest.xml:7:5-20
@@ -42,6 +42,7 @@ MERGED from [com.android.support:support-media-compat:25.2.0] /Users/rteves/.and
 MERGED from [com.android.support:support-core-ui:25.2.0] /Users/rteves/.android/build-cache/0e6574084c09c1a1bc597f8118085945df1ee23b/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-core-utils:25.2.0] /Users/rteves/.android/build-cache/c288afcdc7a2fd4c3d08cbf74d7fa204df17c6df/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:25.2.0] /Users/rteves/.android/build-cache/ee727de83b54653999efc0e45f528f910da380d3/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/rteves/.android/build-cache/67b8fcf0cafa7b0b8e6feee725ffe0f55fb997c9/output/AndroidManifest.xml:9:5-20
 	android:label
 		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:26:9-41
 	android:allowBackup
@@ -65,33 +66,39 @@ ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/P
 	android:name
 		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:32:13-48
 activity#com.parse.starter.MainActivity
-ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:35:9-43:20
+ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:35:9-44:20
 	android:label
-		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:37:13-45
+		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:38:13-45
+	android:theme
+		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:37:13-51
 	android:name
 		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:36:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:38:13-42:29
+ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:39:13-43:29
 action#android.intent.action.MAIN
-ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:39:17-69
+ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:40:17-69
 	android:name
-		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:39:25-66
+		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:40:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:41:17-77
+ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:42:17-77
 	android:name
-		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:41:27-74
+		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:42:27-74
 meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:52:9-54:55
+ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:53:9-55:55
 	android:value
-		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:54:13-52
+		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:55:13-52
 	android:name
-		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:53:13-58
+		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:54:13-58
 activity#com.parse.starter.RiderActivity
-ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:56:9-58:69
+ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:57:9-59:60
 	android:label
-		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:58:13-57
+		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:59:13-57
 	android:name
-		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:57:13-42
+		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:58:13-42
+activity#com.parse.starter.ViewRequestActivity
+ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:60:9-66
+	android:name
+		ADDED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml:60:19-54
 uses-sdk
 INJECTED from /Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/rteves/.android/build-cache/08a322621f9501df01bf75d2fe6467266596c6fb/output/AndroidManifest.xml:21:5-23:78
@@ -107,6 +114,7 @@ MERGED from [com.android.support:support-media-compat:25.2.0] /Users/rteves/.and
 MERGED from [com.android.support:support-core-ui:25.2.0] /Users/rteves/.android/build-cache/0e6574084c09c1a1bc597f8118085945df1ee23b/output/AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:25.2.0] /Users/rteves/.android/build-cache/c288afcdc7a2fd4c3d08cbf74d7fa204df17c6df/output/AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:25.2.0] /Users/rteves/.android/build-cache/ee727de83b54653999efc0e45f528f910da380d3/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/rteves/.android/build-cache/67b8fcf0cafa7b0b8e6feee725ffe0f55fb997c9/output/AndroidManifest.xml:5:5-7:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:23.4.0] /Users/rteves/.android/build-cache/08a322621f9501df01bf75d2fe6467266596c6fb/output/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion

@@ -140,6 +140,10 @@
         "source": "/Users/rteves/.android/build-cache/08a322621f9501df01bf75d2fe6467266596c6fb/output/res/layout/abc_list_menu_item_layout.xml"
     },
     {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/res/merged/debug/layout/activity_view_request.xml",
+        "source": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/src/main/res/layout/activity_view_request.xml"
+    },
+    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRide/ParseStarterProject/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
         "source": "/Users/rteves/.android/build-cache/08a322621f9501df01bf75d2fe6467266596c6fb/output/res/layout/notification_template_big_media_narrow.xml"
     },
