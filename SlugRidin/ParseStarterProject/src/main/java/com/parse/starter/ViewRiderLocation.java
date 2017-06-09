@@ -113,7 +113,7 @@ public class ViewRiderLocation extends FragmentActivity implements OnMapReadyCal
         markers.add(mMap.addMarker(new MarkerOptions().position(RiderLatLng).title("Rider Location")));
 
         //Taking Driver LATLNG and creating a marker
-        LatLng DriverLatLng = new LatLng(i.getDoubleExtra("Userlatitude", 0), i.getDoubleExtra("Userlongitude", 0));
+        LatLng DriverLatLng = new LatLng(i.getDoubleExtra("userLatitude", 0), i.getDoubleExtra("userLongitude", 0));
         markers.add(mMap.addMarker(new MarkerOptions()
                         .position(DriverLatLng)
                         .title("Rider Location")

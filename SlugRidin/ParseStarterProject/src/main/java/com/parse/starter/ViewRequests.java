@@ -15,6 +15,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -71,6 +72,8 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
 
         //Placeholder text until we have found requests
         listViewContent.add("Find nearby requests...");
+        Log.i("userLat", Double.toString(location.getLatitude()));
+        Log.i("userLong", Double.toString(location.getLongitude()));
 
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listViewContent);
         listView.setAdapter(arrayAdapter);
@@ -121,22 +124,26 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
                 if ( e == null){
-                    if(objects.size() > 0){
+                    if(objects.size() > 0) {
                         listViewContent.clear();
                         usernames.clear();
                         latitudes.clear();
                         longitudes.clear();
-                        for (ParseObject object : objects){
+                        for (ParseObject object : objects) {
                             Double distanceInMiles = userLocation.distanceInMilesTo((ParseGeoPoint) object.get("requesterLocation"));
-                            Double distaneOneDP = (double) Math.round(distanceInMiles *10) / 10;
-                            listViewContent.add(String.valueOf(distaneOneDP)+ " miles");
+                            Double distaneOneDP = (double) Math.round(distanceInMiles * 10) / 10;
+                            listViewContent.add(String.valueOf(distaneOneDP) + " miles");
                             usernames.add(object.getString("requesterUsername"));
                             latitudes.add(object.getParseGeoPoint("requesterLocation").getLatitude());
                             longitudes.add(object.getParseGeoPoint("requesterLocation").getLongitude());
-                        }
-                        arrayAdapter.notifyDataSetChanged();
+                            }
+                    } else {
+                        listViewContent.clear();
+                        listViewContent.add("No nearby request");
                     }
+                        arrayAdapter.notifyDataSetChanged();
                 }
+
             }
         });
     }

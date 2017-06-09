@@ -55,8 +55,8 @@
         android:layout_height="wrap_content"
         android:text="GET STARTED"
         android:id="@+id/getStarted"
-        android:layout_marginTop="33dp"
         android:onClick="getStarted"
         android:layout_below="@+id/riderOrDriverSwitch"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp" />
 </RelativeLayout>
