@@ -20,6 +20,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Switch;
 
 import com.parse.LogInCallback;
@@ -84,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-
     //set up our swtich for use above
     riderOrDriverSwitch = (Switch) findViewById(R.id.riderOrDriverSwitch);
 

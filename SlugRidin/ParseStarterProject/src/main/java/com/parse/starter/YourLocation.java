@@ -79,10 +79,10 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                                 if (location != null){
                                         mMap.clear();
                                         ParseGeoPoint userLocation = new ParseGeoPoint(location.getLatitude(), location.getLongitude());
-                                        Double distanceInMiles = userLocation.distanceInMilesTo(userLocation);
+                                        Double distanceInMiles = driverLocation.distanceInMilesTo(userLocation);
                                         Double distaneOneDP = (double) Math.round(distanceInMiles * 10) / 10;
                                         Log.d("distance", distanceInMiles.toString());
-                                        if (distanceInMiles < 0.001){
+                                        if (distaneOneDP < 0.01){
                                             infoTextView.setText("Your driver is here");
                                             requestUberButton.setText("End Search");
 //                                            requestActive = false;

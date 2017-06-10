@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000">
@@ -22,19 +23,56 @@
         android:layout_centerHorizontal="true"
         android:background="#86ffffff" />
 
-    <TextView
+    <Switch
+        android:id="@+id/campusSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DRIVE"
+        android:layout_gravity="center_horizontal"
+        android:background="#86ffffff"
+        android:checked="false"
+        android:layout_below="@+id/textView8"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_alignBottom="@+id/textView" />
+
+    <TextView
         android:id="@+id/textView"
-        android:textSize="24sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView8"
+        android:layout_toEndOf="@+id/campusSwitch"
+        android:layout_toRightOf="@+id/campusSwitch"
+        android:background="#86ffffff"
+        android:paddingLeft="10dp"
+        android:text="ON CAMPUS"
         android:textColor="#d5ffffff"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/riderOrDriverSwitch"
         android:layout_alignTop="@+id/riderOrDriverSwitch"
         android:layout_toEndOf="@+id/riderOrDriverSwitch"
         android:layout_toRightOf="@+id/riderOrDriverSwitch"
         android:background="#86ffffff"
-        android:layout_alignBottom="@+id/riderOrDriverSwitch"
-        android:paddingLeft="10dp" />
+        android:paddingLeft="10dp"
+        android:text="DRIVE"
+        android:textColor="#d5ffffff"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/riderOrDriverSwitch"
+        android:layout_centerHorizontal="true"
+        android:background="#86ffffff"
+        android:paddingLeft="10dp"
+        android:text="HEADING"
+        android:textColor="#d5ffffff"
+        android:textSize="24sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -50,13 +88,50 @@
         android:layout_alignBottom="@+id/riderOrDriverSwitch"
         android:paddingRight="10dp" />
 
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#86ffffff"
+        android:paddingRight="10dp"
+        android:text="BUS ROUTE"
+        android:textColor="#d5ffffff"
+        android:textSize="24sp"
+        android:layout_below="@+id/campusSwitch"
+        android:layout_toLeftOf="@+id/campusSwitch"
+        android:layout_toStartOf="@+id/campusSwitch" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView8"
+        android:layout_toLeftOf="@+id/campusSwitch"
+        android:layout_toStartOf="@+id/campusSwitch"
+        android:background="#86ffffff"
+        android:paddingRight="10dp"
+        android:text="OFF CAMPUS"
+        android:textColor="#d5ffffff"
+        android:textSize="24sp" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="GET STARTED"
         android:id="@+id/getStarted"
         android:onClick="getStarted"
-        android:layout_below="@+id/riderOrDriverSwitch"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:id="@+id/bus"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/campusSwitch"
+        android:layout_toEndOf="@+id/textView7"
+        android:layout_toRightOf="@+id/textView7"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:textColor="#d5ffffff"/>
+
 </RelativeLayout>

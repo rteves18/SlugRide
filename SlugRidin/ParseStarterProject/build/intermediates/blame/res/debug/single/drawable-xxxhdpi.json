@@ -72,12 +72,12 @@
         "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/drawable-xxxhdpi/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-xxxhdpi/abc_tab_indicator_mtrl_alpha.9.png",
-        "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/drawable-xxxhdpi/abc_tab_indicator_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-xxxhdpi/abc_btn_switch_to_on_mtrl_00012.9.png",
         "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/drawable-xxxhdpi/abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-xxxhdpi/abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/drawable-xxxhdpi/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-xxxhdpi/abc_ic_menu_selectall_mtrl_alpha.png",
