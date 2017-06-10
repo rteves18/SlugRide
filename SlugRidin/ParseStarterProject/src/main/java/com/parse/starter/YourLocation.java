@@ -56,6 +56,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
     Boolean requestActive = false;
     android.os.Handler handler = new android.os.Handler();
     boolean driverActive = false;
+    boolean turnoff = false;
 
 
     public void checkForUpdates(){
@@ -80,43 +81,65 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                                         ParseGeoPoint userLocation = new ParseGeoPoint(location.getLatitude(), location.getLongitude());
                                         Double distanceInMiles = userLocation.distanceInMilesTo(userLocation);
                                         Double distaneOneDP = (double) Math.round(distanceInMiles * 10) / 10;
-                                        infoTextView.setText("Your driver is " + distaneOneDP.toString() + " miles away!");
+                                        Log.d("distance", distanceInMiles.toString());
+                                        if (distanceInMiles < 0.001){
+                                            infoTextView.setText("Your driver is here");
+                                            requestUberButton.setText("End Search");
+//                                            requestActive = false;
+                                            driverActive = false;
+                                            ParseQuery<ParseObject> query = ParseQuery.getQuery("Requests");
+                                            query.whereEqualTo("requesterUsername", ParseUser.getCurrentUser().getUsername());
+                                            query.findInBackground(new FindCallback<ParseObject>() {
+                                                @Override
+                                                public void done(List<ParseObject> objects, ParseException e) {
+                                                    if (e == null){
+                                                        for (ParseObject object : objects){
+                                                            object.deleteInBackground();
+                                                        }
+                                                    }
+                                                }
+                                            });
 
-                                        ArrayList<Marker> markers = new ArrayList<Marker>();
+                                        } else {
+                                            infoTextView.setText("Your driver is " + distaneOneDP.toString() + " miles away!");
 
-                                        //Taking Rider LATLNG and creating a marker
-                                        LatLng RiderLatLng = new LatLng(userLocation.getLatitude(), userLocation.getLongitude());
-                                        markers.add(mMap.addMarker(new MarkerOptions().position(RiderLatLng).title("Your Location")));
+                                            ArrayList<Marker> markers = new ArrayList<Marker>();
 
-                                        //Taking Driver LATLNG and creating a marker
-                                        LatLng DriverLatLng = new LatLng(driverLocation.getLatitude(), driverLocation.getLongitude());
-                                        markers.add(mMap.addMarker(new MarkerOptions()
-                                                .position(DriverLatLng)
-                                                .title("Driver Location")
-                                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))));
+                                            //Taking Rider LATLNG and creating a marker
+                                            LatLng RiderLatLng = new LatLng(userLocation.getLatitude(), userLocation.getLongitude());
+                                            markers.add(mMap.addMarker(new MarkerOptions().position(RiderLatLng).title("Your Location")));
 
-                                        //Looping through Markers and adding to builder.
-                                        LatLngBounds.Builder builder = new LatLngBounds.Builder();
-                                        for (Marker marker : markers) {
-                                            builder.include(marker.getPosition());
-                                        }
-                                        //Building our boundaries
-                                        LatLngBounds bounds = builder.build();
+                                            //Taking Driver LATLNG and creating a marker
+                                            LatLng DriverLatLng = new LatLng(driverLocation.getLatitude(), driverLocation.getLongitude());
+                                            markers.add(mMap.addMarker(new MarkerOptions()
+                                                    .position(DriverLatLng)
+                                                    .title("Driver Location")
+                                                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))));
 
-                                        //offset from edge of map to our markers
-                                        int padding = 150;
+                                            //Looping through Markers and adding to builder.
+                                            LatLngBounds.Builder builder = new LatLngBounds.Builder();
+                                            for (Marker marker : markers) {
+                                                builder.include(marker.getPosition());
+                                            }
+                                            //Building our boundaries
+                                            LatLngBounds bounds = builder.build();
 
-                                        //putting it together now
-                                        Point displaySizePx = new Point();
-                                        Display display = getWindowManager().getDefaultDisplay();
-                                        display.getSize(displaySizePx);
-                                        CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, displaySizePx.x, displaySizePx.y, padding);
+                                            //offset from edge of map to our markers
+                                            int padding = 150;
 
-                                        //animate and show!
-                                        mMap.animateCamera(cu);
-                                        if(requestActive == false){
-                                            mMap.clear();
-                                            infoTextView.setText("Uber cancelled");
+                                            //putting it together now
+                                            Point displaySizePx = new Point();
+                                            Display display = getWindowManager().getDefaultDisplay();
+                                            display.getSize(displaySizePx);
+                                            CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, displaySizePx.x, displaySizePx.y, padding);
+
+                                            //animate and show!
+                                            mMap.animateCamera(cu);
+                                            if (requestActive == false || turnoff == true) {
+                                                turnoff = false;
+                                                mMap.clear();
+                                                infoTextView.setText("Uber cancelled");
+                                            }
                                         }
                                 }
                             }
@@ -184,10 +207,16 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                     }
                 }
             });
+            if (driverActive == false) {
+                infoTextView.setText("");
+            } else {
+                infoTextView.setText("Uber Cancelled");
+            }
 
-            infoTextView.setText("Uber Cancelled");
             requestUberButton.setText("Request Uber");
             requestActive = false;
+            turnoff = true;
+            checkForUpdates();
 
         }
     }
