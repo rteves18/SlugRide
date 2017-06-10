@@ -7,6 +7,7 @@ package com.parse.starter;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Point;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
@@ -15,15 +16,20 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
+import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.parse.FindCallback;
 import com.parse.ParseACL;
@@ -34,6 +40,7 @@ import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Handler;
 import java.util.logging.LogRecord;
@@ -48,6 +55,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
     boolean buttonMyLocationClicked = false;
     Boolean requestActive = false;
     android.os.Handler handler = new android.os.Handler();
+    boolean driverActive = false;
 
 
     public void checkForUpdates(){
@@ -58,6 +66,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
                 if (e == null && objects.size() > 0){
+                    driverActive = true;
                     ParseQuery<ParseUser> query = ParseUser.getQuery();
                     query.whereEqualTo("username", objects.get(0).getString("driverUsername"));
                     query.findInBackground(new FindCallback<ParseUser>() {
@@ -67,10 +76,48 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                                 ParseGeoPoint driverLocation = objects.get(0).getParseGeoPoint("location");
                                 Location location = locationManager.getLastKnownLocation(provider);
                                 if (location != null){
-                                    ParseGeoPoint userLocation = new ParseGeoPoint(location.getLatitude(), location.getLongitude());
-                                    Double distanceInMiles = userLocation.distanceInMilesTo(userLocation);
-                                    Double distaneOneDP = (double) Math.round(distanceInMiles * 10) / 10;
-                                    infoTextView.setText("Your driver is " +  distaneOneDP.toString() + " miles away!");
+                                        mMap.clear();
+                                        ParseGeoPoint userLocation = new ParseGeoPoint(location.getLatitude(), location.getLongitude());
+                                        Double distanceInMiles = userLocation.distanceInMilesTo(userLocation);
+                                        Double distaneOneDP = (double) Math.round(distanceInMiles * 10) / 10;
+                                        infoTextView.setText("Your driver is " + distaneOneDP.toString() + " miles away!");
+
+                                        ArrayList<Marker> markers = new ArrayList<Marker>();
+
+                                        //Taking Rider LATLNG and creating a marker
+                                        LatLng RiderLatLng = new LatLng(userLocation.getLatitude(), userLocation.getLongitude());
+                                        markers.add(mMap.addMarker(new MarkerOptions().position(RiderLatLng).title("Your Location")));
+
+                                        //Taking Driver LATLNG and creating a marker
+                                        LatLng DriverLatLng = new LatLng(driverLocation.getLatitude(), driverLocation.getLongitude());
+                                        markers.add(mMap.addMarker(new MarkerOptions()
+                                                .position(DriverLatLng)
+                                                .title("Driver Location")
+                                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))));
+
+                                        //Looping through Markers and adding to builder.
+                                        LatLngBounds.Builder builder = new LatLngBounds.Builder();
+                                        for (Marker marker : markers) {
+                                            builder.include(marker.getPosition());
+                                        }
+                                        //Building our boundaries
+                                        LatLngBounds bounds = builder.build();
+
+                                        //offset from edge of map to our markers
+                                        int padding = 150;
+
+                                        //putting it together now
+                                        Point displaySizePx = new Point();
+                                        Display display = getWindowManager().getDefaultDisplay();
+                                        display.getSize(displaySizePx);
+                                        CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, displaySizePx.x, displaySizePx.y, padding);
+
+                                        //animate and show!
+                                        mMap.animateCamera(cu);
+                                        if(requestActive == false){
+                                            mMap.clear();
+                                            infoTextView.setText("Uber cancelled");
+                                        }
                                 }
                             }
                         }
@@ -146,9 +193,11 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void updateMap(Location location){
-        LatLng userLocation = new LatLng(location.getLatitude(), location.getLongitude());
-        mMap.clear();
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(userLocation,15));
+        if(driverActive == false) {
+            LatLng userLocation = new LatLng(location.getLatitude(), location.getLongitude());
+            mMap.clear();
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(userLocation, 15));
+        }
     }
 
 
@@ -179,6 +228,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                 }
             }
         });
+
 
         //Use the location manager and provider to determine the users location accurate to 1 meter, updated 400 miliseconds
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -216,14 +266,18 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Enables the My Location button
-        mMap.setMyLocationEnabled(true);
-        mMap.setOnMyLocationButtonClickListener(new GoogleMap.OnMyLocationButtonClickListener() {
-            @Override
-            public boolean onMyLocationButtonClick() {
-                buttonMyLocationClicked = true;
-                return false;
-            }
-        });
+        if(driverActive == false) {
+            mMap.setMyLocationEnabled(true);
+            mMap.setOnMyLocationButtonClickListener(new GoogleMap.OnMyLocationButtonClickListener() {
+                @Override
+                public boolean onMyLocationButtonClick() {
+                    buttonMyLocationClicked = true;
+                    return false;
+                }
+            });
+        } else {
+            mMap.setMyLocationEnabled(false);
+        }
 
 
 

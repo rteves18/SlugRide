@@ -8,12 +8,12 @@
         "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/layout/abc_action_menu_layout.xml"
     },
     {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout/layout_tab_icon.xml",
-        "source": "/Users/rteves/.android/build-cache/ff5cab275fae07f358faae87643153d26a5e78cc/output/res/layout/layout_tab_icon.xml"
-    },
-    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
         "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout/layout_tab_icon.xml",
+        "source": "/Users/rteves/.android/build-cache/ff5cab275fae07f358faae87643153d26a5e78cc/output/res/layout/layout_tab_icon.xml"
     },
     {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout/abc_simple_dropdown_hint.xml",
@@ -24,12 +24,12 @@
         "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/layout/notification_media_action.xml"
     },
     {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
-        "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
-    },
-    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout/mr_media_route_list_item.xml",
         "source": "/Users/rteves/.android/build-cache/d582baf554809e065e1a466168c9e568db469d2e/output/res/layout/mr_media_route_list_item.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout/mr_media_route_chooser_dialog.xml",
@@ -48,12 +48,12 @@
         "source": "/Users/rteves/.android/build-cache/ff5cab275fae07f358faae87643153d26a5e78cc/output/res/layout/layout_snackbar.xml"
     },
     {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
-        "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/layout/abc_action_mode_bar.xml"
-    },
-    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
         "source": "/Users/rteves/.android/build-cache/ff5cab275fae07f358faae87643153d26a5e78cc/output/res/layout/design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/layout/abc_action_mode_bar.xml"
     },
     {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
