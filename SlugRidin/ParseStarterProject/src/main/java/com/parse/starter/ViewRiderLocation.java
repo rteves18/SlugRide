@@ -37,6 +37,7 @@ public class ViewRiderLocation extends FragmentActivity implements OnMapReadyCal
 
     private GoogleMap mMap;
     Intent i;
+    String Requests;
 
     //sets up our back button so the user can exit if they don't like the request.
     public void back(View view){
@@ -50,7 +51,7 @@ public class ViewRiderLocation extends FragmentActivity implements OnMapReadyCal
         //search parse for the reuqest that was accepted. Once the reuqest is found,
         // add the drivers username to parse and save so that the request is marked as taken.
         // Now we can open up a new google maps intent so the driver can navigate to the rider.
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("Requests");
+        ParseQuery<ParseObject> query = ParseQuery.getQuery(Requests);
         query.whereEqualTo("requesterUsername", i.getStringExtra("username"));
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
@@ -86,6 +87,7 @@ public class ViewRiderLocation extends FragmentActivity implements OnMapReadyCal
         setContentView(R.layout.activity_view_rider_location);
 
         i = getIntent();
+        Requests = i.getStringExtra("request");
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()

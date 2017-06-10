@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000">
@@ -19,21 +20,22 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="46dp"
         android:checked="false"
+        android:background="#86ffffff"
         android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true"
-        android:background="#86ffffff" />
+        android:layout_centerHorizontal="true" />
 
     <Switch
         android:id="@+id/campusSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_below="@+id/textView8"
         android:layout_gravity="center_horizontal"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
         android:background="#86ffffff"
         android:checked="false"
-        android:layout_below="@+id/textView8"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2"
-        android:layout_alignBottom="@+id/textView" />
+        tools:checked="false" />
 
     <TextView
         android:id="@+id/textView"
@@ -127,11 +129,14 @@
         android:id="@+id/bus"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView7"
         android:layout_below="@+id/campusSwitch"
         android:layout_toEndOf="@+id/textView7"
         android:layout_toRightOf="@+id/textView7"
-        android:background="@android:drawable/btn_dropdown"
+        android:background="#86ffffff"
+        android:entries="@array/routes"
         android:spinnerMode="dropdown"
-        android:textColor="#d5ffffff"/>
+        android:textColor="#d5ffffff"
+        app:spinnerMode="dialog" />
 
 </RelativeLayout>

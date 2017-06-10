@@ -46,6 +46,10 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
     ArrayAdapter arrayAdapter;
     LocationManager locationManager;
     String provider;
+    Intent ir;
+    String setBusRoute;
+    String setCampus;
+    String Requests;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +57,11 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
         setContentView(R.layout.activity_view_requests);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        ir = getIntent();
+        setCampus = ir.getStringExtra("campus");
+        setBusRoute = ir.getStringExtra("busRoute");
+        Requests = "Requests" + setCampus + setBusRoute;
+
 
         //Set up a location manager for the drivers location
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -91,6 +100,7 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
                 i.putExtra("longitude", longitudes.get(position));
                 i.putExtra("userLatitude", location.getLatitude());
                 i.putExtra("userLongitude", location.getLongitude());
+                i.putExtra("request", Requests);
                 startActivity(i);
 
             }
@@ -118,7 +128,7 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
     //Update the listview with the results.
     public void updateLocation(){
         final ParseGeoPoint userLocation = new ParseGeoPoint(location.getLatitude(), location.getLongitude());
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("Requests");
+        ParseQuery<ParseObject> query = ParseQuery.getQuery(Requests);
         query.whereDoesNotExist("driverUsername");
         query.whereNear("requesterLocation", userLocation);
         query.setLimit(10);

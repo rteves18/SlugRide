@@ -19,6 +19,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Switch;
@@ -37,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
     //Determines if our user is a Rider or Driver
     Switch riderOrDriverSwitch;
+    Switch campus;
+    Spinner busRoute;
+    String setBusRoute = "10";
+    String setCampus = "off";
 
     //When the user hits the GET STARTED Button
     public void getStarted(View view){
@@ -49,6 +55,17 @@ public class MainActivity extends AppCompatActivity {
         } else {
             // **RIDER MODE**
             riderOrDriver = "rider";
+        }
+
+        setCampus = "off";
+
+        if (campus.isChecked()){
+            // **ON CAMPUS**
+            setCampus = "on";
+
+        } else {
+            // **OFF CAMPUS**
+            setCampus = "off";
         }
 
         //save the users option of rider/driver to parse then we redirectUser()
@@ -71,10 +88,14 @@ public class MainActivity extends AppCompatActivity {
 
         if ( ParseUser.getCurrentUser().get("riderOrDriver").equals("rider")){
             Intent i = new Intent(getApplicationContext(), YourLocation.class);
+            i.putExtra("campus", setCampus);
+            i.putExtra("busRoute", setBusRoute);
             startActivity(i);
 
         } else {
             Intent i = new Intent(getApplicationContext(), ViewRequests.class);
+            i.putExtra("campus", setCampus);
+            i.putExtra("busRoute", setBusRoute);
             startActivity(i);
 
         }
@@ -86,7 +107,22 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     //set up our swtich for use above
+    campus = (Switch) findViewById(R.id.campusSwitch);
     riderOrDriverSwitch = (Switch) findViewById(R.id.riderOrDriverSwitch);
+    busRoute = (Spinner) findViewById(R.id.bus);
+      busRoute.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+          @Override
+          public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+              setBusRoute = parent.getSelectedItem().toString();
+              Log.i("selected bus route", setBusRoute);
+          }
+
+          @Override
+          public void onNothingSelected(AdapterView<?> parent) {
+
+          }
+      });
+
 
     //Needed for parse
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
