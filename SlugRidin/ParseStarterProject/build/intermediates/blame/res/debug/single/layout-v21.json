@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/rteves/.android/build-cache/26806ec866a326e8b32457101e34f41d0a209e42/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/rteves/.android/build-cache/26806ec866a326e8b32457101e34f41d0a209e42/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout-v21/place_autocomplete_fragment.xml",
+        "source": "/Users/rteves/.android/build-cache/a46c63e49a3d3dbb6dbc318620e8d62fc85201ef/output/res/layout-v21/place_autocomplete_fragment.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/rteves/.android/build-cache/26806ec866a326e8b32457101e34f41d0a209e42/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/rteves/.android/build-cache/26806ec866a326e8b32457101e34f41d0a209e42/output/res/layout-v21/notification_template_icon_group.xml"
+    }
+]

@@ -12,12 +12,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/rteves/.android/build-cache/06ec35b126fec7bf66d9b51ebda2d762942ebb24/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_192a6792867290122719e07075baad5c0157fd90.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/rteves/.android/build-cache/1d66e45bbc71e3d9c2ffab5ad23e1620df0639b7/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="724ce977487ab3a215d4d2eb47d8dccd9f30013f">
         <dex dex="/Users/rteves/Documents/college/cmps/cmps121/Simple-Android-Uber-Clone/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_b53be9c34d3782b3aabc031362e95d95a09ca8a2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rteves/.android/build-cache/06ec35b126fec7bf66d9b51ebda2d762942ebb24/output/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_19ff2b63be2dad0045a90bae3cac5a8f3c04bfab.jar" />
     </item>
     <item
         is-multidex="false"
@@ -45,6 +63,15 @@
         revision="25.0.0"
         sha1="58adcfbe2c8393765e84c5489d01bba6a5159eb2">
         <dex dex="/Users/rteves/Documents/college/cmps/cmps121/Simple-Android-Uber-Clone/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_1584a1550ee1f39be6431a560e84385eb2e0218b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rteves/.android/build-cache/edb3baf5c4d5bc368a56b67bbc0e00919e344da6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_026b2e970bf9573c340769e6937e3f94f08d8f9a.jar" />
     </item>
     <item
         is-multidex="false"
@@ -90,6 +117,15 @@
         revision="25.0.0"
         sha1="b000ecceb9877fefcdc7ab1959ff03df91551656">
         <dex dex="/Users/rteves/Documents/college/cmps/cmps121/Simple-Android-Uber-Clone/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_33c1eb27083a2af6ecd4f13229f3aa6b1384da15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rteves/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0/support-annotations-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_bc2bbd015cca6ccf25705eeac8a0e59aba95d0c1.jar" />
     </item>
     <item
         is-multidex="false"
@@ -165,6 +201,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/rteves/.android/build-cache/4f33e99c520c7f296a0313ec2496f82a8e60b242/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_a1b72123eba7a2ba58c3be8aa1ed54ccfd3f03b2.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/rteves/.android/build-cache/db24eb4fab8917819481724764811ea00f86015e/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -198,6 +243,15 @@
         revision="25.0.0"
         sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
         <dex dex="/Users/rteves/Documents/college/cmps/cmps121/Simple-Android-Uber-Clone/ParseStarterProject/build/intermediates/pre-dexed/debug/internal_impl-22.2.0_b9e39b1b34d6354d24e20a184718597e5dfc657d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rteves/.android/build-cache/0bd121ac61f294af08c8d060c6ab76f871a27883/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_cd3d5e53c6c09ab69f78c510d736d8c287fccf51.jar" />
     </item>
     <item
         is-multidex="false"
@@ -252,6 +306,15 @@
         revision="25.0.0"
         sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
         <dex dex="/Users/rteves/Documents/college/cmps/cmps121/Simple-Android-Uber-Clone/ParseStarterProject/build/intermediates/pre-dexed/debug/internal_impl-22.2.1_887b79dc093a7da3825098c0262d7beb451ac19a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rteves/.android/build-cache/31ddf7a8e72448b5cce1311a4abebfa51da4dafc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/pre-dexed/debug/classes_feb6053561771693774f365e781307dcbb13b3fb.jar" />
     </item>
     <item
         is-multidex="false"

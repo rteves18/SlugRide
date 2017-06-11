@@ -164,12 +164,16 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
     protected void onResume() {
         super.onResume();
         locationManager.requestLocationUpdates(provider, 400, 1, this);
+        onLocationChanged(location);
     }
     //save battery on phone sleep
     @Override
     protected void onPause() {
         super.onPause();
-        locationManager.removeUpdates(this);
+//        locationManager.removeUpdates(this);
+        locationManager.requestLocationUpdates(provider, 400, 1, this);
+        onLocationChanged(location);
+
     }
 
     @Override

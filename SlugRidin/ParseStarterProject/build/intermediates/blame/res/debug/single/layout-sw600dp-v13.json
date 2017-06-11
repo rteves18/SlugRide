@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/Users/rteves/.android/build-cache/52ea32d2a10ca824031c45a71d64b6ee35a970f2/output/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    },
+    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout-sw600dp-v13/layout_snackbar.xml",
         "source": "/Users/rteves/.android/build-cache/ff5cab275fae07f358faae87643153d26a5e78cc/output/res/layout-sw600dp/layout_snackbar.xml"
     }

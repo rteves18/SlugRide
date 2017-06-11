@@ -80,12 +80,12 @@
         "source": "/Users/rteves/.android/build-cache/db24eb4fab8917819481724764811ea00f86015e/output/res/drawable-mdpi/common_google_signin_btn_text_light_pressed.9.png"
     },
     {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-mdpi/abc_textfield_search_default_mtrl_alpha.9.png",
-        "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/drawable-mdpi/abc_textfield_search_default_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-mdpi/ic_plusone_tall_off_client.png",
         "source": "/Users/rteves/.android/build-cache/cb46e0359c900d6b9dcca5ce65ee8c0d659e3db7/output/res/drawable-mdpi/ic_plusone_tall_off_client.png"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-mdpi/abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/drawable-mdpi/abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_icon_dark_focused.9.png",
@@ -116,12 +116,12 @@
         "source": "/Users/rteves/.android/build-cache/db24eb4fab8917819481724764811ea00f86015e/output/res/drawable-mdpi/common_google_signin_btn_text_dark_normal.9.png"
     },
     {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_text_light_normal.9.png",
-        "source": "/Users/rteves/.android/build-cache/db24eb4fab8917819481724764811ea00f86015e/output/res/drawable-mdpi/common_google_signin_btn_text_light_normal.9.png"
-    },
-    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-mdpi/abc_list_selector_disabled_holo_dark.9.png",
         "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/drawable-mdpi/abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_text_light_normal.9.png",
+        "source": "/Users/rteves/.android/build-cache/db24eb4fab8917819481724764811ea00f86015e/output/res/drawable-mdpi/common_google_signin_btn_text_light_normal.9.png"
     },
     {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_icon_light_focused.9.png",

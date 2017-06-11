@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/Users/rteves/.android/build-cache/26806ec866a326e8b32457101e34f41d0a209e42/output/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/Users/rteves/.android/build-cache/26806ec866a326e8b32457101e34f41d0a209e42/output/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/Users/rteves/.android/build-cache/26806ec866a326e8b32457101e34f41d0a209e42/output/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/Users/rteves/.android/build-cache/26806ec866a326e8b32457101e34f41d0a209e42/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/rteves/.android/build-cache/26806ec866a326e8b32457101e34f41d0a209e42/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/Users/rteves/.android/build-cache/26806ec866a326e8b32457101e34f41d0a209e42/output/res/layout-v11/notification_media_cancel_action.xml"
+    }
+]
