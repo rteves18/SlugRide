@@ -1,4 +1,0 @@
-#Sat Jun 10 21:04:32 PDT 2017
-base.0=/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/transforms/dex/debug/folders/1000/1f/main
-renamed.0=classes.dex
-file.0=/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

@@ -65,11 +65,17 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
     String setBusRoute;
     String setCampus;
     String Requests;
+    boolean alreadyExecuted = false;
 
     public void showNotification(String message){
         View parentLayout = getWindow().getDecorView().findViewById(android.R.id.content);
-        final Snackbar snackBar = Snackbar.make(parentLayout, message, Snackbar.LENGTH_INDEFINITE);
-
+        int length;
+        if (message.contains("Searching")) {
+            length =  Snackbar.LENGTH_INDEFINITE;
+        } else {
+            length = Snackbar.LENGTH_LONG;
+        }
+        final Snackbar snackBar = Snackbar.make(parentLayout, message, length);
         snackBar.setAction("OK", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -125,7 +131,13 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                                             });
 
                                         } else {
-                                            showNotification("Your driver is " + distaneOneDP.toString() + " miles away!");
+
+                                            if(!alreadyExecuted && requestActive == true){
+                                                showNotification("Driver found!");
+                                                alreadyExecuted = true;
+                                            }
+
+                                            infoTextView.setText("Your driver is\n" + distaneOneDP.toString() + " miles away!");
 
                                             ArrayList<Marker> markers = new ArrayList<Marker>();
 
@@ -162,7 +174,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                                             if (requestActive == false || turnoff == true) {
                                                 turnoff = false;
                                                 mMap.clear();
-                                                infoTextView.setText("Uber cancelled");
+                                                infoTextView.setText("Heading " + setCampus.toUpperCase() + " Campus \nBus Route " + setBusRoute);
                                             }
                                         }
                                 }
@@ -178,6 +190,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                     @Override
                     public void run() {
                         checkForUpdates();
+                        Log.d("check 1", Boolean.toString(alreadyExecuted));
                     }
                 }, 2000);
             }
@@ -200,13 +213,16 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                 @Override
                 public void done(ParseException e) {
                     if (e == null) {
-                        showNotification("Finding Uber driver...");
+                        showNotification("Searching for driver...");
 //                        infoTextView.setText("Finding Uber driver...");
-                        requestUberButton.setText("Cancel Uber");
+                        requestUberButton.setText("Cancel");
                         requestActive = true;
                         Location location = locationManager.getLastKnownLocation(provider);
                         updateLocation(location);
+                        Log.d("check 2", Boolean.toString(alreadyExecuted));
                         checkForUpdates();
+                        alreadyExecuted = false;
+//                        Log.d("check 3", Boolean.toString(alreadyExecuted));
 
                     }
                 }
@@ -236,13 +252,17 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
             if (driverActive == false) {
                 infoTextView.setText("");
             } else {
-                showNotification("Uber Cancelled");
+                showNotification("Hitch Cancelled");
+
             }
 
-            requestUberButton.setText("Request Uber");
+            requestUberButton.setText("Hitch Ride");
+            infoTextView.setText("Heading " + setCampus.toUpperCase() + " Campus \nBus Route " + setBusRoute);
             requestActive = false;
             turnoff = true;
+            Log.d("check 3", Boolean.toString(alreadyExecuted));
             checkForUpdates();
+            alreadyExecuted = false;
 
         }
     }
@@ -271,6 +291,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
 
         infoTextView = (TextView) findViewById(R.id.infoTextView);
         requestUberButton = (Button) findViewById(R.id.requestUber);
+        infoTextView.setText("Heading " + setCampus.toUpperCase() + " Campus \nBus Route " + setBusRoute);
 
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(Requests);
         query.whereEqualTo("requesterUsername", ParseUser.getCurrentUser().getUsername());
@@ -281,7 +302,8 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                     if (objects.size() > 0){
 
                         requestActive = true;
-                        requestUberButton.setText("Cancel Uber");
+                        requestUberButton.setText("Cancel");
+                        Log.d("check 4", Boolean.toString(alreadyExecuted));
                         checkForUpdates();
                     }
                 }
@@ -293,7 +315,9 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         provider = locationManager.getBestProvider(new Criteria(), false);
         locationManager.requestLocationUpdates(provider, 400, 1, this);
-
+//        if (driverActive){
+//            showNotification("Driver found!");
+//        }
 
 
     }

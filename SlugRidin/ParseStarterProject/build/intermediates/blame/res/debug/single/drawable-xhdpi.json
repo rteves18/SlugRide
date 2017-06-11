@@ -32,12 +32,12 @@
         "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/drawable-xhdpi/abc_ic_ab_back_mtrl_am_alpha.png"
     },
     {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-xhdpi/common_plus_signin_btn_text_dark_focused.9.png",
-        "source": "/Users/rteves/.android/build-cache/db24eb4fab8917819481724764811ea00f86015e/output/res/drawable-xhdpi/common_plus_signin_btn_text_dark_focused.9.png"
-    },
-    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-xhdpi/ic_media_route_on_1_mono_dark.png",
         "source": "/Users/rteves/.android/build-cache/d582baf554809e065e1a466168c9e568db469d2e/output/res/drawable-xhdpi/ic_media_route_on_1_mono_dark.png"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-xhdpi/common_plus_signin_btn_text_dark_focused.9.png",
+        "source": "/Users/rteves/.android/build-cache/db24eb4fab8917819481724764811ea00f86015e/output/res/drawable-xhdpi/common_plus_signin_btn_text_dark_focused.9.png"
     },
     {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-xhdpi/abc_spinner_mtrl_am_alpha.9.png",
@@ -68,12 +68,12 @@
         "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/drawable-xhdpi/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-xhdpi/common_google_signin_btn_text_dark_normal.9.png",
-        "source": "/Users/rteves/.android/build-cache/db24eb4fab8917819481724764811ea00f86015e/output/res/drawable-xhdpi/common_google_signin_btn_text_dark_normal.9.png"
-    },
-    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-xhdpi/cast_ic_notification_on.png",
         "source": "/Users/rteves/.android/build-cache/ef57164ee16e4a49ec916f0ca339b22f71ddf0d3/output/res/drawable-xhdpi/cast_ic_notification_on.png"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-xhdpi/common_google_signin_btn_text_dark_normal.9.png",
+        "source": "/Users/rteves/.android/build-cache/db24eb4fab8917819481724764811ea00f86015e/output/res/drawable-xhdpi/common_google_signin_btn_text_dark_normal.9.png"
     },
     {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-xhdpi/abc_textfield_search_default_mtrl_alpha.9.png",
@@ -304,12 +304,12 @@
         "source": "/Users/rteves/.android/build-cache/d582baf554809e065e1a466168c9e568db469d2e/output/res/drawable-xhdpi/ic_media_route_on_mono_dark.png"
     },
     {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-xhdpi/abc_btn_check_to_on_mtrl_000.png",
-        "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/drawable-xhdpi/abc_btn_check_to_on_mtrl_000.png"
-    },
-    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-xhdpi/common_google_signin_btn_text_dark_focused.9.png",
         "source": "/Users/rteves/.android/build-cache/db24eb4fab8917819481724764811ea00f86015e/output/res/drawable-xhdpi/common_google_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-xhdpi/abc_btn_check_to_on_mtrl_000.png",
+        "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/drawable-xhdpi/abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/drawable-xhdpi/ic_setting_light.png",

@@ -13,12 +13,14 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -34,8 +36,11 @@ import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Handler;
 
 public class ViewRequests extends AppCompatActivity implements LocationListener {
+
+    private SwipeRefreshLayout mSwipeRefreshLayout;
 
     Location location;
     ListView listView;
@@ -50,6 +55,7 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
     String setBusRoute;
     String setCampus;
     String Requests;
+    android.os.Handler handler = new android.os.Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +67,7 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
         setCampus = ir.getStringExtra("campus");
         setBusRoute = ir.getStringExtra("busRoute");
         Requests = "Requests" + setCampus + setBusRoute;
-
-
+        setTitle("Heading " + setCampus.toUpperCase() + " Campus " + "Route " + setBusRoute);
         //Set up a location manager for the drivers location
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         provider = locationManager.getBestProvider(new Criteria(), false);
@@ -83,17 +88,35 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
 
         //Placeholder text until we have found requests
         listViewContent.add("Find nearby requests...");
-        Log.i("userLat", Double.toString(location.getLatitude()));
-        Log.i("userLong", Double.toString(location.getLongitude()));
+//        Log.i("userLat", Double.toString(location.getLatitude()));
+//        Log.i("userLong", Double.toString(location.getLongitude()));
+
+
 
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listViewContent);
         listView.setAdapter(arrayAdapter);
 
+        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swiperefresh);
+        mSwipeRefreshLayout.setColorSchemeResources(R.color.orange, R.color.blue, R.color.purple);
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        listView.setAdapter(arrayAdapter);
+                        updateLocation();
+                        mSwipeRefreshLayout.setRefreshing(false);
+                    }
+                }, 2500);
+            }
+        });
         //Our onItemClickListener determines which listview item was clicked, then passes the pertinent information through.
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                boolean check = listViewContent.contains("No nearby request");
+                if(!check){
                 Intent i = new Intent(getApplicationContext(), ViewRiderLocation.class);
                 i.putExtra("username", usernames.get(position));
                 i.putExtra("latitude", latitudes.get(position));
@@ -102,6 +125,7 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
                 i.putExtra("userLongitude", location.getLongitude());
                 i.putExtra("request", Requests);
                 startActivity(i);
+                }
 
             }
         });
@@ -110,16 +134,9 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
 
 
 
-        //unimportant
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
+
+
 
     //Our Update location function creates a Parse GeoPoint for the driver and saves it in parse.
     //Then we search the parse database for all requests without a driver yet.

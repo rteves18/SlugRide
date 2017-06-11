@@ -12,10 +12,6 @@
         "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/anim/abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_in.xml",
-        "source": "/Users/rteves/.android/build-cache/52ea32d2a10ca824031c45a71d64b6ee35a970f2/output/res/anim/design_bottom_sheet_slide_in.xml"
-    },
-    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
         "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/anim/abc_fade_out.xml"
     },
@@ -32,10 +28,6 @@
         "source": "/Users/rteves/.android/build-cache/ff5cab275fae07f358faae87643153d26a5e78cc/output/res/anim/fab_in.xml"
     },
     {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/anim/design_fab_out.xml",
-        "source": "/Users/rteves/.android/build-cache/52ea32d2a10ca824031c45a71d64b6ee35a970f2/output/res/anim/design_fab_out.xml"
-    },
-    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/anim/fab_out.xml",
         "source": "/Users/rteves/.android/build-cache/ff5cab275fae07f358faae87643153d26a5e78cc/output/res/anim/fab_out.xml"
     },
@@ -46,10 +38,6 @@
     {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
         "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/anim/abc_slide_out_top.xml"
-    },
-    {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
-        "source": "/Users/rteves/.android/build-cache/52ea32d2a10ca824031c45a71d64b6ee35a970f2/output/res/anim/design_fab_in.xml"
     },
     {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
@@ -64,19 +52,7 @@
         "source": "/Users/rteves/.android/build-cache/aa776d8ba4e55e9f60baf27747473b89685fe981/output/res/anim/abc_slide_out_bottom.xml"
     },
     {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
-        "source": "/Users/rteves/.android/build-cache/52ea32d2a10ca824031c45a71d64b6ee35a970f2/output/res/anim/design_snackbar_out.xml"
-    },
-    {
         "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/anim/snackbar_out.xml",
         "source": "/Users/rteves/.android/build-cache/ff5cab275fae07f358faae87643153d26a5e78cc/output/res/anim/snackbar_out.xml"
-    },
-    {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_out.xml",
-        "source": "/Users/rteves/.android/build-cache/52ea32d2a10ca824031c45a71d64b6ee35a970f2/output/res/anim/design_bottom_sheet_slide_out.xml"
-    },
-    {
-        "merged": "/Users/rteves/Documents/college/cmps/cmps121/final_project/SlugRidin/ParseStarterProject/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
-        "source": "/Users/rteves/.android/build-cache/52ea32d2a10ca824031c45a71d64b6ee35a970f2/output/res/anim/design_snackbar_in.xml"
     }
 ]
