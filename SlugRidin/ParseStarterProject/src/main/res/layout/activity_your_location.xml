@@ -20,13 +20,13 @@
         android:layout_height="wrap_content"
         android:text="Request Uber"
         android:id="@+id/requestUber"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="20dp"
         android:layout_marginRight="20dp"
         android:nestedScrollingEnabled="false"
-        android:onClick="requestUber" />
+        android:onClick="requestUber"
+        android:layout_marginEnd="20dp"
+        android:layout_alignTop="@+id/infoTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"

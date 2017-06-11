@@ -13,6 +13,7 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -46,6 +47,8 @@ import java.util.List;
 import java.util.logging.Handler;
 import java.util.logging.LogRecord;
 
+import static android.support.design.widget.Snackbar.LENGTH_INDEFINITE;
+
 public class YourLocation extends FragmentActivity implements OnMapReadyCallback, LocationListener {
 
     private GoogleMap mMap;
@@ -62,6 +65,22 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
     String setBusRoute;
     String setCampus;
     String Requests;
+
+    public void showNotification(String message){
+        View parentLayout = getWindow().getDecorView().findViewById(android.R.id.content);
+        final Snackbar snackBar = Snackbar.make(parentLayout, message, Snackbar.LENGTH_INDEFINITE);
+
+        snackBar.setAction("OK", new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                snackBar.dismiss();
+            }
+        });
+        snackBar.show();
+//        View parentLayout = getWindow().getDecorView().findViewById(android.R.id.content);
+//        Snackbar.make(parentLayout, message, LENGTH_INDEFINITE)
+//                .setAction("Action", null).show();
+    }
 
 
     public void checkForUpdates(){
@@ -87,8 +106,8 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                                         Double distanceInMiles = driverLocation.distanceInMilesTo(userLocation);
                                         Double distaneOneDP = (double) Math.round(distanceInMiles * 10) / 10;
                                         Log.d("distance", distanceInMiles.toString());
-                                        if (distaneOneDP < 0.01){
-                                            infoTextView.setText("Your driver is here");
+                                        if (distanceInMiles < 0.01){
+                                            showNotification("Your driver is here");
                                             requestUberButton.setText("End Search");
 //                                            requestActive = false;
                                             driverActive = false;
@@ -106,7 +125,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                                             });
 
                                         } else {
-                                            infoTextView.setText("Your driver is " + distaneOneDP.toString() + " miles away!");
+                                            showNotification("Your driver is " + distaneOneDP.toString() + " miles away!");
 
                                             ArrayList<Marker> markers = new ArrayList<Marker>();
 
@@ -166,6 +185,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
     }
     //Runs when a user clicks "REQUEST UBER"
     public void requestUber(View view){
+
         //Allows the user to create a request
         if (requestActive == false) {
 
@@ -180,7 +200,8 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                 @Override
                 public void done(ParseException e) {
                     if (e == null) {
-                        infoTextView.setText("Finding Uber driver...");
+                        showNotification("Finding Uber driver...");
+//                        infoTextView.setText("Finding Uber driver...");
                         requestUberButton.setText("Cancel Uber");
                         requestActive = true;
                         Location location = locationManager.getLastKnownLocation(provider);
@@ -215,7 +236,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
             if (driverActive == false) {
                 infoTextView.setText("");
             } else {
-                infoTextView.setText("Uber Cancelled");
+                showNotification("Uber Cancelled");
             }
 
             requestUberButton.setText("Request Uber");
