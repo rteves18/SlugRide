@@ -67,6 +67,13 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
     String Requests;
     boolean alreadyExecuted = false;
 
+    public String capitalizeFirstLetter(String original) {
+        if (original == null || original.length() == 0) {
+            return original;
+        }
+        return original.substring(0, 1).toUpperCase() + original.substring(1);
+    }
+
     public void showNotification(String message){
         View parentLayout = getWindow().getDecorView().findViewById(android.R.id.content);
         int length;
@@ -137,7 +144,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                                                 alreadyExecuted = true;
                                             }
 
-                                            infoTextView.setText("Your driver is\n" + distaneOneDP.toString() + " miles away!");
+                                            infoTextView.setText("Your driver is " + distaneOneDP.toString() + " miles away!");
 
                                             ArrayList<Marker> markers = new ArrayList<Marker>();
 
@@ -161,7 +168,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                                             LatLngBounds bounds = builder.build();
 
                                             //offset from edge of map to our markers
-                                            int padding = 150;
+                                            int padding = 450;
 
                                             //putting it together now
                                             Point displaySizePx = new Point();
@@ -174,7 +181,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                                             if (requestActive == false || turnoff == true) {
                                                 turnoff = false;
                                                 mMap.clear();
-                                                infoTextView.setText("Heading " + setCampus.toUpperCase() + " Campus \nBus Route " + setBusRoute);
+                                                infoTextView.setText("Heading " + capitalizeFirstLetter(setCampus) + " Campus Route " + setBusRoute);
                                             }
                                         }
                                 }
@@ -257,7 +264,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
             }
 
             requestUberButton.setText("Hitch Ride");
-            infoTextView.setText("Heading " + setCampus.toUpperCase() + " Campus \nBus Route " + setBusRoute);
+            infoTextView.setText("Heading " + capitalizeFirstLetter(setCampus) + " Campus Route " + setBusRoute);
             requestActive = false;
             turnoff = true;
             Log.d("check 3", Boolean.toString(alreadyExecuted));
@@ -291,7 +298,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
 
         infoTextView = (TextView) findViewById(R.id.infoTextView);
         requestUberButton = (Button) findViewById(R.id.requestUber);
-        infoTextView.setText("Heading " + setCampus.toUpperCase() + " Campus \nBus Route " + setBusRoute);
+        infoTextView.setText("Heading " + capitalizeFirstLetter(setCampus) + " Campus Route " + setBusRoute);
 
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(Requests);
         query.whereEqualTo("requesterUsername", ParseUser.getCurrentUser().getUsername());

@@ -59,6 +59,8 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
     String Requests;
     android.os.Handler handler = new android.os.Handler();
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

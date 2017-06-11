@@ -17,29 +17,39 @@
 
     <Button
         android:id="@+id/requestUber"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/infoTextView"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_alignEnd="@+id/infoTextView"
+        android:layout_alignLeft="@+id/infoTextView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/infoTextView"
+        android:layout_alignStart="@+id/infoTextView"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:fontFamily="sans-serif-condensed"
         android:nestedScrollingEnabled="false"
         android:onClick="requestUber"
-        android:text="HITCH RIDE" />
+        android:text="HITCH RIDE"
+        android:textColor="@color/background_material_light" />
 
     <TextView
         android:id="@+id/infoTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="61dp"
-        android:layout_marginLeft="20dp"
-        android:text="blah"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/requestUber"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="20dp" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#CCf2c054"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text="blah"
+        android:textColor="?android:attr/colorEdgeEffect"
+        android:textSize="20sp" />
 
 </RelativeLayout>
