@@ -34,7 +34,9 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.Handler;
 
@@ -161,7 +163,10 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
                         for (ParseObject object : objects) {
                             Double distanceInMiles = userLocation.distanceInMilesTo((ParseGeoPoint) object.get("requesterLocation"));
                             Double distaneOneDP = (double) Math.round(distanceInMiles * 10) / 10;
-                            listViewContent.add(String.valueOf(distaneOneDP) + " miles");
+                            Date requestedTime = new Date();
+                            requestedTime = object.getUpdatedAt();
+                            SimpleDateFormat rt = new SimpleDateFormat("E MMMM-dd hh:mm a");
+                            listViewContent.add(String.valueOf(distaneOneDP) + " miles away\n" + "Requested Time: " + rt.format(requestedTime));
                             usernames.add(object.getString("requesterUsername"));
                             latitudes.add(object.getParseGeoPoint("requesterLocation").getLatitude());
                             longitudes.add(object.getParseGeoPoint("requesterLocation").getLongitude());
