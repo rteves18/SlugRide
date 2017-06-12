@@ -18,10 +18,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.LatLng;
@@ -59,7 +62,33 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
     String Requests;
     android.os.Handler handler = new android.os.Handler();
 
+    /*class CustomAdapter extends BaseAdapter{
 
+        @Override
+        public int getCount() {
+            return 0;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            convertView = getLayoutInflater().inflate(R.layout.content_view_requests_custom_layout,null);
+            TextView tvTitle = (TextView) convertView.findViewById(R.id.tvTitle);
+            TextView tvDescription = (TextView) convertView.findViewById(R.id.tvDescription);
+
+            tvTitle.setText(listViewContent.get(position));
+            return null;
+        }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
