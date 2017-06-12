@@ -12,6 +12,7 @@ package com.parse.starter;
 
 import android.app.ActionBar;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +25,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import com.parse.LogInCallback;
 import com.parse.ParseAnalytics;

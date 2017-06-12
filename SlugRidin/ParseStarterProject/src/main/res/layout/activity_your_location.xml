@@ -17,15 +17,15 @@
 
     <Button
         android:id="@+id/requestUber"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/infoTextView"
-        android:layout_alignLeft="@+id/infoTextView"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/infoTextView"
-        android:layout_alignStart="@+id/infoTextView"
-        android:layout_marginBottom="50dp"
-        android:backgroundTint="@android:color/holo_blue_light"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="49dp"
+        android:backgroundTint="#33B5E5"
         android:fontFamily="sans-serif-condensed"
         android:nestedScrollingEnabled="false"
         android:onClick="requestUber"
@@ -34,14 +34,15 @@
 
     <TextView
         android:id="@+id/infoTextView"
-        android:layout_width="match_parent"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/requestUber"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="#CCf2c054"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/status"
         android:fontFamily="sans-serif-condensed"
         android:gravity="center"
         android:paddingBottom="5dp"
@@ -49,7 +50,7 @@
         android:paddingRight="10dp"
         android:paddingTop="5dp"
         android:text="blah"
-        android:textColor="?android:attr/colorEdgeEffect"
+        android:textColor="#212121"
         android:textSize="20sp" />
 
 </RelativeLayout>

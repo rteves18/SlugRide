@@ -168,7 +168,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                                             LatLngBounds bounds = builder.build();
 
                                             //offset from edge of map to our markers
-                                            int padding = 450;
+                                            int padding = 150;
 
                                             //putting it together now
                                             Point displaySizePx = new Point();
@@ -240,7 +240,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
         //Allows the user to cancel an already submitted request
         } else {
             Log.i("blah", "deleting request");
-
+            showNotification("Search Cancelled");
             //search Parse for all objects with our username. Then deletes them from the database
             ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(Requests);
             query.whereEqualTo("requesterUsername", ParseUser.getCurrentUser().getUsername());

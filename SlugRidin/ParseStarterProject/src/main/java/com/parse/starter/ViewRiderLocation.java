@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -80,15 +81,25 @@ public class ViewRiderLocation extends FragmentActivity implements OnMapReadyCal
 
     }
 
+    public String capitalizeFirstLetter(String original) {
+        if (original == null || original.length() == 0) {
+            return original;
+        }
+        return original.substring(0, 1).toUpperCase() + original.substring(1);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_rider_location);
+        TextView status = (TextView) findViewById(R.id.status);
 
         i = getIntent();
         Requests = i.getStringExtra("request");
-
+        String setCampus = i.getStringExtra("campus");
+        String setBusRoute = i.getStringExtra("busRoute");
+        status.setText("Heading " + capitalizeFirstLetter(setCampus) + " Campus " + "Route " + setBusRoute);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);

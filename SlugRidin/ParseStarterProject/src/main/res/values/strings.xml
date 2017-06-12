@@ -24,4 +24,7 @@
     <string name="title_activity_your_location">Your Location</string>
     <string name="title_activity_view_requests">ViewRequests</string>
     <string name="title_activity_view_rider_location">View Rider Location</string>
+    <string name="rider">RIDER</string>
+    <string name="heading">Heading</string>
+    <string name="on">ON Campus</string>
 </resources>

@@ -22,6 +22,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.LatLng;
@@ -60,18 +61,26 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
     android.os.Handler handler = new android.os.Handler();
 
 
+    public String capitalizeFirstLetter(String original) {
+        if (original == null || original.length() == 0) {
+            return original;
+        }
+        return original.substring(0, 1).toUpperCase() + original.substring(1);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_requests);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        TextView status = (TextView) findViewById(R.id.status);
         setSupportActionBar(toolbar);
         ir = getIntent();
         setCampus = ir.getStringExtra("campus");
         setBusRoute = ir.getStringExtra("busRoute");
         Requests = "Requests" + setCampus + setBusRoute;
-        setTitle("Heading " + setCampus.toUpperCase() + " Campus " + "Route " + setBusRoute);
+        setTitle("Nearby Hitch Hickers");
+        status.setText("Heading " + capitalizeFirstLetter(setCampus) + " Campus " + "Route " + setBusRoute);
         //Set up a location manager for the drivers location
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         provider = locationManager.getBestProvider(new Criteria(), false);
@@ -101,7 +110,7 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
         listView.setAdapter(arrayAdapter);
 
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swiperefresh);
-        mSwipeRefreshLayout.setColorSchemeResources(R.color.orange, R.color.blue, R.color.purple);
+        mSwipeRefreshLayout.setColorSchemeResources(R.color.orange, R.color.blue);
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -127,6 +136,8 @@ public class ViewRequests extends AppCompatActivity implements LocationListener 
                 i.putExtra("longitude", longitudes.get(position));
                 i.putExtra("userLatitude", location.getLatitude());
                 i.putExtra("userLongitude", location.getLongitude());
+                i.putExtra("campus", setCampus);
+                i.putExtra("busRoute", setBusRoute);
                 i.putExtra("request", Requests);
                 startActivity(i);
                 }
