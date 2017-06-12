@@ -131,4 +131,18 @@
         android:layout_alignLeft="@+id/getStarted"
         android:layout_alignStart="@+id/getStarted" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/getStarted"
+        android:layout_alignEnd="@+id/getStarted"
+        android:layout_alignLeft="@+id/getStarted"
+        android:layout_alignRight="@+id/getStarted"
+        android:layout_alignStart="@+id/getStarted"
+        android:layout_below="@+id/imageView"
+        android:background="@drawable/status2"
+        android:text="blah"
+        android:visibility="invisible" />
+
 </RelativeLayout>
