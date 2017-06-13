@@ -132,7 +132,7 @@ public class ViewRiderLocation extends FragmentActivity implements OnMapReadyCal
         markers.add(mMap.addMarker(new MarkerOptions()
                         .position(DriverLatLng)
                         .title("Your Location")
-                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))));
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.driversmarkertrimmed))));
 
         //Looping through Markers and adding to builder.
         LatLngBounds.Builder builder = new LatLngBounds.Builder();
@@ -143,7 +143,7 @@ public class ViewRiderLocation extends FragmentActivity implements OnMapReadyCal
         LatLngBounds bounds = builder.build();
 
         //offset from edge of map to our markers
-        int padding = 150;
+        int padding = 350;
 
         //putting it together now
         Point displaySizePx = new Point();

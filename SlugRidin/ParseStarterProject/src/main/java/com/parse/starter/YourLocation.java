@@ -157,8 +157,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                                             markers.add(mMap.addMarker(new MarkerOptions()
                                                     .position(DriverLatLng)
                                                     .title("Driver Location")
-                                                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))));
-
+                                                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.driversmarkertrimmed))));
                                             //Looping through Markers and adding to builder.
                                             LatLngBounds.Builder builder = new LatLngBounds.Builder();
                                             for (Marker marker : markers) {
@@ -168,7 +167,7 @@ public class YourLocation extends FragmentActivity implements OnMapReadyCallback
                                             LatLngBounds bounds = builder.build();
 
                                             //offset from edge of map to our markers
-                                            int padding = 150;
+                                            int padding = 350;
 
                                             //putting it together now
                                             Point displaySizePx = new Point();
