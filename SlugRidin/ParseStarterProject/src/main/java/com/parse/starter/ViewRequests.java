@@ -1,8 +1,6 @@
 package com.parse.starter;
 
-// This is the Activity for DRIVERS!!
-// This activity allows drivers to see a listview showing the closest rides
-// Drivers can click on the listview to see an individual ride which will take them to the ViewRiderLocation Activity
+
 
 import android.content.Context;
 import android.content.Intent;
@@ -40,6 +38,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Handler;
+
+//view rider requests as a driver
 
 public class ViewRequests extends AppCompatActivity implements LocationListener {
 

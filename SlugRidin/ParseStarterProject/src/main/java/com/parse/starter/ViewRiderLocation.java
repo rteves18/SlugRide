@@ -1,6 +1,5 @@
 package com.parse.starter;
 
-//Activity Manages the views of both rider and driver and is the last step before a ride is accepted
 
 import android.content.Intent;
 import android.graphics.Point;
@@ -33,6 +32,8 @@ import com.parse.SaveCallback;
 
 import java.util.ArrayList;
 import java.util.List;
+
+//view rider location as driver
 
 public class ViewRiderLocation extends FragmentActivity implements OnMapReadyCallback {
 

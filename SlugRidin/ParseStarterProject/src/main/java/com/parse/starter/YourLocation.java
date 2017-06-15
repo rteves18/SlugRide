@@ -1,9 +1,6 @@
 package com.parse.starter;
 
-//This activity is for RIDERS!!
-//Once the app has determined you are a rider you are redirected to this page.
-//This is a Google Maps Activity that shows the user their location.
-//From this page they are able to request and cancel an UBER.
+
 
 import android.content.Context;
 import android.content.Intent;
@@ -48,6 +45,8 @@ import java.util.logging.Handler;
 import java.util.logging.LogRecord;
 
 import static android.support.design.widget.Snackbar.LENGTH_INDEFINITE;
+
+//view rider location and request ride from driver
 
 public class YourLocation extends FragmentActivity implements OnMapReadyCallback, LocationListener {
 

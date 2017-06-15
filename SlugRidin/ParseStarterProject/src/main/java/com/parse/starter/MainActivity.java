@@ -8,7 +8,7 @@
  */
 package com.parse.starter;
 
-//Simple Uber Clone App. Read along. If you have questions feel free to email bmorelli25@gmail.com
+
 
 import android.app.ActionBar;
 import android.content.Intent;
@@ -36,7 +36,10 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 
-
+//Main and first Activity
+//choose between being a rider or driver
+//choose going on or off campus
+//chooes preference of bus route
 public class MainActivity extends AppCompatActivity {
 
     //Determines if our user is a Rider or Driver

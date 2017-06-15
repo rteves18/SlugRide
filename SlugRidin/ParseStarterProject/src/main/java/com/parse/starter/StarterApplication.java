@@ -8,8 +8,7 @@
  */
 package com.parse.starter;
 
-//This is our Parse Activity which includes the code necessary for parse to run. Update the
-//application ID and Server to run the code on your own parse server.
+
 
 import android.app.Application;
 import android.util.Log;
@@ -20,6 +19,8 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
+
+//connects parse to heroku server
 
 
 public class StarterApplication extends Application {
